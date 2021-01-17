@@ -22,16 +22,18 @@ namespace ConsoleDemo
 
             //bird1.Fly();
 
-            AbstractDemo obj = new AbstractDemo();
+            //AbstractDemo obj = new AbstractDemo();
 
 
-            Console.WriteLine("The version is : " + obj.Version);
+            //Console.WriteLine("The version is : " + obj.Version);
 
-            var result = obj.Calculate(5, 8);
-            Console.WriteLine("The version is : " + obj.Version);
+            //var result = obj.Calculate(5, 8);
+            //Console.WriteLine("The version is : " + obj.Version);
 
-            Console.WriteLine($"the result is : {result}");
+            //Console.WriteLine($"the result is : {result}");
 
+            ArrayDemo o = new ArrayDemo();
+            o.Test();
         }
         
     }
