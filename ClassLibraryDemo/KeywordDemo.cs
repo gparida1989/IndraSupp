@@ -16,6 +16,16 @@ namespace ClassLibraryDemo
         }
 
     }
+
+    public class KClass
+    {
+        public int a = 10;
+
+        public void Inc()
+        {
+            a = a + 2;
+        }
+    }
     class Another: KeywordDemo
     {
         
