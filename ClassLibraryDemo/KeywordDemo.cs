@@ -14,8 +14,7 @@ namespace ClassLibraryDemo
             int i = 6;
             var name = true;  // explicit datatype declaration
 
-            Console.WriteLine("in Keyworddemo -- SI = " + KClass.SI);
-
+            
         }
 
     }

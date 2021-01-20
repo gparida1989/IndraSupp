@@ -60,23 +60,27 @@ namespace ConsoleDemo
             //Console.WriteLine($" value : {obj2.a}"); // 10
 
             var obj = new KClass();
-            Console.WriteLine(KClass.SI);
-
-            KClass.SInc();
-            var o = new KeywordDemo();
-            o.Test();
-            obj.Inc();
-            KClass.SInc(); KClass.SInc(); KClass.SInc();
-            Console.WriteLine(KClass.SI);
-            o.Test();
-            obj.Inc();
-            obj.Inc();
-            KClass.SInc(); KClass.SInc(); KClass.SInc();
-            Console.WriteLine(KClass.SI);
 
 
 
+            //Console.WriteLine(KClass.SI);//10
 
+            //KClass.SInc();//11
+            //var o = new KeywordDemo();
+            //o.Test();//11
+            //obj.Inc();//a= 12,si =11
+            //KClass.SInc(); KClass.SInc(); KClass.SInc();//14
+            //Console.WriteLine(KClass.SI);//14
+            //o.Test();//14
+            //obj.Inc();//a=14,si=12
+            //obj.Inc();//a=16,si=13
+            //KClass.SInc(); KClass.SInc(); KClass.SInc();//16
+            //Console.WriteLine(KClass.SI);//16
+
+
+            int a = 50;
+            var res = a.Add1K(10);
+            Console.WriteLine(res);
 
 
 
