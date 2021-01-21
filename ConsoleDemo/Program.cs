@@ -86,7 +86,9 @@ namespace ConsoleDemo
             char m = s.GetMiddleChar();
 
             Console.WriteLine(m);
-          
+            int[] ar = { 1,2,3,4,5};
+            int sm = ar.IndexSum();
+            Console.WriteLine(sm);
         }
 
     }

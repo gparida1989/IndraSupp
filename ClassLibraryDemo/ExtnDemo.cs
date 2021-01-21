@@ -41,6 +41,22 @@ namespace ClassLibraryDemo
          * Math.Pow(10,2) = 100
          * */
 
+        public static int IndexSum(this int[] ar)
+        {
+            int sum = 0;
 
+
+            //sum = Convert.ToInt32( ar[0] * Math.Pow(10, 0)) + Convert.ToInt32(ar[1] * Math.Pow(10, 1))
+            //    + Convert.ToInt32(ar[2] * Math.Pow(10, 2)) + Convert.ToInt32(ar[3] * Math.Pow(10, 3))
+            //    + Convert.ToInt32(ar[4] * Math.Pow(10, 4));
+
+            // repeating length times .. 
+
+            for(int i=0;i<=ar.Length-1;i++)
+            {
+                sum = sum + Convert.ToInt32(ar[i] * Math.Pow(10, i));
+            }
+            return sum;
+        }
     }
 }
