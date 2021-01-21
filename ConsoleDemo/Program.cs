@@ -82,10 +82,11 @@ namespace ConsoleDemo
             var res = a.Add1K(10);
             Console.WriteLine(res);
 
+            string s = "indraa";
+            char m = s.GetMiddleChar();
 
-
-
-
+            Console.WriteLine(m);
+          
         }
 
     }

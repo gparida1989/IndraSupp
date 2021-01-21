@@ -25,5 +25,22 @@ namespace ClassLibraryDemo
         /*
        * ex : string s ="indra"; char m = s.GetMiddleChar(); m='d';
        * */
+        public static char GetMiddleChar(this string s)
+        {
+            var len = s.Length;
+            var middleIndex = len / 2;
+
+            var c = s[middleIndex];
+
+            return c;
+        }
+
+        /*
+         * int[] ar = new int[5]; ar={1,2,3,4,5};
+         * ar.IndexSum(); // 50000 + 4000 + 3 * 10 pow 2 + 2 * 10 pow 1+ 1 * 10 pow 0 = 54321
+         * Math.Pow(10,2) = 100
+         * */
+
+
     }
 }
