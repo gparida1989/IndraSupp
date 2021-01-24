@@ -59,7 +59,7 @@ namespace ConsoleDemo
 
             //Console.WriteLine($" value : {obj2.a}"); // 10
 
-            var obj = new KClass();
+            //var obj = new KClass();
 
 
 
@@ -78,17 +78,20 @@ namespace ConsoleDemo
             //Console.WriteLine(KClass.SI);//16
 
 
-            int a = 50;
-            var res = a.Add1K(10);
-            Console.WriteLine(res);
+            //int a = 50;
+            //var res = a.Add1K(10);
+            //Console.WriteLine(res);
 
-            string s = "indraa";
-            char m = s.GetMiddleChar();
+            //string s = "indraa";
+            //char m = s.GetMiddleChar();
 
-            Console.WriteLine(m);
-            int[] ar = { 1,2,3,4,5};
-            int sm = ar.IndexSum();
-            Console.WriteLine(sm);
+            //Console.WriteLine(m);
+            //int[] ar = { 1,2,3,4,5};
+            //int sm = ar.IndexSum();
+            //Console.WriteLine(sm);
+
+            var obj = new ArrayDemo();
+            obj.Test1();
         }
 
     }

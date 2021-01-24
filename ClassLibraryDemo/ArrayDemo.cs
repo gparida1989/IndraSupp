@@ -39,5 +39,28 @@ namespace ClassLibraryDemo
             }
 
         }
+
+        public void Test1()
+        {
+            int[] ar = new int[8] { 4,5,8,6,5,2,7,3};
+
+            PrintArray(ar);
+            string[] ar1 = new string[2] { "india", "cnada" };
+            PrintArray(ar1);
+
+            int[] d = new int[15];
+            ar.CopyTo(d, 2);
+
+            PrintArray(d);
+
+        }
+
+        void PrintArray(Array array)
+        {
+            for (int n = 0; n < array.Length; n++)
+            {
+                Console.WriteLine($"Element at {n} index is : {array.GetValue(n)}");
+            }
+        }
     }
 }
