@@ -51,7 +51,10 @@ namespace ClassLibraryDemo
             int[] d = new int[15];
             ar.CopyTo(d, 2);
 
-            PrintArray(d);
+            object copycat = ar.Clone();
+
+            Array newAr = (Array)copycat;//type csting 
+            PrintArray(newAr);
 
         }
 
