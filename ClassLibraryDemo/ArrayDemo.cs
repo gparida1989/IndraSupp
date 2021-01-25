@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
@@ -42,19 +43,46 @@ namespace ClassLibraryDemo
 
         public void Test1()
         {
-            int[] ar = new int[8] { 4,5,8,6,5,2,7,3};
+            //int[] ar = new int[8] { 4,5,8,6,5,2,7,3};
 
-            PrintArray(ar);
-            string[] ar1 = new string[2] { "india", "cnada" };
-            PrintArray(ar1);
+            //PrintArray(ar);
+            //string[] ar1 = new string[2] { "india", "cnada" };
+            //PrintArray(ar1);
 
-            int[] d = new int[15];
-            ar.CopyTo(d, 2);
+            //int[] d = new int[15];
+            //ar.CopyTo(d, 2);
 
-            object copycat = ar.Clone();
+            //object copycat = ar.Clone();
 
-            Array newAr = (Array)copycat;//type csting 
-            PrintArray(newAr);
+            //Array newAr = (Array)copycat;//type csting 
+            //PrintArray(newAr);
+
+            // declare an array
+            // size =5
+            // ar[0] = "indra"
+            // ar[1] = 55
+            // ar[2] = 65.3
+            // ar[3]=true
+            // ar[4]='k'
+
+            // fixed size 
+            //object[] oar = new object[5];
+            //oar[0] = 63.35f;
+            //oar[1] = true;
+            //oar[2] = 86;
+            //oar[3] = "india";
+            //oar[4] = 'y';
+
+            // dynamic size
+            ArrayList al = new ArrayList();
+            al.Add(63.5f);
+            al.Add(false);
+            al.Add(65);
+
+            Console.Write(al[2]);
+
+
+            
 
         }
 

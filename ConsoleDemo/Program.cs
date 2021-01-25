@@ -92,6 +92,10 @@ namespace ConsoleDemo
 
             var obj = new ArrayDemo();
             obj.Test1();
+
+
+
+
         }
 
     }
