@@ -74,14 +74,26 @@ namespace ClassLibraryDemo
             //oar[4] = 'y';
 
             // dynamic size
-            ArrayList al = new ArrayList();
-            al.Add(63.5f);
-            al.Add(false);
-            al.Add(65);
+            //ArrayList al = new ArrayList();
+            //al.Add(63.5f);
+            //al.Add(false);
+            //al.Add(65);
 
-            Console.Write(al[2]);
+            //Console./*Write*/(al[2]);
+
+            // problem : type safety-- not type safe
+            // benefit : dynamic size
+
+            // Generic list
+
+            List<float> al = new List<int>();
+            al.Add(5);
+            al.Add(6);
 
 
+            //al.Add("india");
+
+            IncreamentArray(al.ToArray());
             
 
         }
@@ -90,6 +102,19 @@ namespace ClassLibraryDemo
         {
             for (int n = 0; n < array.Length; n++)
             {
+                Console.WriteLine($"Element at {n} index is : {array.GetValue(n)}");
+            }
+        }
+
+        void IncreamentArray(Array array)
+        {
+            // type safety
+            // increase each value by 2
+            for (int n = 0; n < array.Length; n++)
+            {
+                var x = (int)array.GetValue(n) + 2;
+                array.SetValue(x, n);
+
                 Console.WriteLine($"Element at {n} index is : {array.GetValue(n)}");
             }
         }
