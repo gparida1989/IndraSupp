@@ -86,7 +86,7 @@ namespace ClassLibraryDemo
 
             // Generic list
 
-            List<float> al = new List<int>();
+            List<int> al = new List<int>();
             al.Add(5);
             al.Add(6);
 

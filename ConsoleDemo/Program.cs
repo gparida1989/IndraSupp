@@ -1,5 +1,6 @@
 ﻿using System;
 using ClassLibraryDemo;
+using ClassLibraryDemo.Child;
 
 namespace ConsoleDemo
 {
@@ -90,11 +91,12 @@ namespace ConsoleDemo
             //int sm = ar.IndexSum();
             //Console.WriteLine(sm);
 
-            var obj = new ArrayDemo();
-            obj.Test1();
+            //var obj = new ArrayDemo();
+            //obj.Test1();
 
-
-
+            // (MyBase)b --> obj of mybase
+            Demo b = new Demo();
+            b.Test();
 
         }
 
