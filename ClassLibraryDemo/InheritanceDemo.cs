@@ -4,10 +4,17 @@ using System.Text;
 
 namespace ClassLibraryDemo
 {
-    public class MyBase
+    //abstract
+    public class ABSDemo
+    {
+
+    }
+    // 
+    //
+    public abstract class MyBase
     {
         private int a=10;
-        public  virtual int Prop1 { get; set; } = 10;
+        public abstract int Prop1 { get; set; }
         protected int c = 20;
 
         public void PrintLtr()
@@ -25,7 +32,7 @@ namespace ClassLibraryDemo
         // we cannot access through object outside a class, but we cn acess directly in a child class
         //protected int c = 20;
 
-        public virtual new  int Prop1 { get; set; } = 100;
+        public override int Prop1 { get; set; } 
         public new void PrintLtr()
         {
             Console.WriteLine("i am in child1");
