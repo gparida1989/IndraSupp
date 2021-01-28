@@ -7,8 +7,13 @@ namespace ClassLibraryDemo
     public class MyBase
     {
         private int a=10;
-        public virtual int Prop1 { get; set; } = 5;
+        public  virtual int Prop1 { get; set; } = 10;
         protected int c = 20;
+
+        public void PrintLtr()
+        {
+            Console.WriteLine("i am in MyBase");
+        }
     }
     public class Child1:MyBase
     {
@@ -20,16 +25,52 @@ namespace ClassLibraryDemo
         // we cannot access through object outside a class, but we cn acess directly in a child class
         //protected int c = 20;
 
-        public override int Prop1 { get; set; } = 50;
+        public virtual new  int Prop1 { get; set; } = 100;
+        public new void PrintLtr()
+        {
+            Console.WriteLine("i am in child1");
+        }
 
     }
     public class Child2 : Child1
     {
-        public override  int Prop1 { get; set; } = 100;
+        public override  int Prop1 { get; set; } = 200;
+        public void PrintLtr()
+        {
+            Console.WriteLine("i am in child2");
+        }
     }
     public class Child3 : Child2
     {
-        public int Prop1 { get; set; } = 200;
+        public virtual int Prop1 { get; set; } = 300;
+        public void PrintLtr()
+        {
+            Console.WriteLine("i am in child3");
+        }
+    }
+    public class Child4 : Child3
+    {
+        public virtual int Prop1 { get; set; } = 400;
+        public void PrintLtr()
+        {
+            Console.WriteLine("i am in child5");
+        }
+    }
+    public class Child5 : Child2
+    {
+        public override int Prop1 { get; set; } = 500;
+    }
+    public class Child6 : Child2
+    {
+        public override int Prop1 { get; set; } = 600;
+    }
+    public class Child7 : Child1
+    {
+        public override int Prop1 { get; set; } = 700;
+    }
+    public class Child8 : MyBase
+    {
+        public override int Prop1 { get; set; } = 800;
     }
 
 }
@@ -45,10 +86,8 @@ namespace ClassLibraryDemo.Child
         //polymorphism
         public void Test()
         {
-            // Variable type : MyBase
-            // instance type : Child2
-            MyBase b = new Child2();
-            Console.WriteLine(b.Prop1); 
+            MyBase b = new Child7();
+            b.PrintLtr(); 
         }
     }
 }
