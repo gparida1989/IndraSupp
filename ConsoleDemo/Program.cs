@@ -95,8 +95,26 @@ namespace ConsoleDemo
             //obj.Test1();
 
             // (MyBase)b --> obj of mybase
-            Demo b = new Demo();
-            b.Test();
+            //Demo b = new Demo();
+            //b.Test();
+
+
+            //var o = new IndraPrint();
+            //b.PP(o);
+
+            IMathOps m = new ValidationDemo();
+
+            try
+            {
+                var result = m.Devide(12, 0);
+            }
+            catch (Exception exc)
+            {
+                Console.WriteLine(exc.Message);
+            }
+           
+
+            //Console.WriteLine(result);
 
         }
 

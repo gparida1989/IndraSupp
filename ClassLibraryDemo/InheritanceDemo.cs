@@ -32,7 +32,7 @@ namespace ClassLibraryDemo
         // we cannot access through object outside a class, but we cn acess directly in a child class
         //protected int c = 20;
 
-        public override int Prop1 { get; set; } 
+        public override int Prop1 { get; set; } = 56;
         public new void PrintLtr()
         {
             Console.WriteLine("i am in child1");
@@ -93,8 +93,16 @@ namespace ClassLibraryDemo.Child
         //polymorphism
         public void Test()
         {
-            MyBase b = new Child7();
-            b.PrintLtr(); 
+            //MyBase b = new Child7();
+            //b.PrintLtr(); 
+
+            IPrint p = new IndraPrint();
+            p.PrintLtr("indra");
+            
+        }
+        public void PP(IPrint p)
+        {
+            p.PrintLtr("in pp");
         }
     }
 }
