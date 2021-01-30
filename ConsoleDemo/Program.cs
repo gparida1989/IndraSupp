@@ -102,17 +102,47 @@ namespace ConsoleDemo
             //var o = new IndraPrint();
             //b.PP(o);
 
-            IMathOps m = new ValidationDemo();
+            // Variable type : different than Instance type
+            // instance wuld be child of vaiable type
+            //Animal d1 = new Dog();
+            //d1.eat();
+            // d1.bark();
 
-            try
-            {
-                var result = m.Devide(12, 0);
-            }
-            catch (Exception exc)
-            {
-                Console.WriteLine(exc.Message);
-            }
-           
+            //Tabletop t = new Tabletop(4.5, 7.5);
+            //t.Display();
+
+            ConsDemo4 d = new ConsDemo4(8);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            //IMathOps m = new ValidationDemo();
+
+            //try
+            //{
+            //    var result = m.Devide(12, 0);
+            //}
+            //catch (Exception exc)
+            //{
+            //    Console.WriteLine(exc.Message);
+            //}
+
 
             //Console.WriteLine(result);
 

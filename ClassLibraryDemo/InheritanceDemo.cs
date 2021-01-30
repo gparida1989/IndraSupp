@@ -79,8 +79,63 @@ namespace ClassLibraryDemo
     {
         public override int Prop1 { get; set; } = 800;
     }
+    public class Rectangle
+    {
+
+        //member variables
+        protected double length;
+        protected double width;
+
+        public Rectangle(double l, double w)
+        {
+            length = l;
+            width = w;
+        }
+        public double GetArea()
+        {
+            return length * width;
+        }
+        public void Display()
+        {
+            Console.WriteLine("Length: {0}", length);
+            Console.WriteLine("Width: {0}", width);
+            Console.WriteLine("Area: {0}", GetArea());
+        }
+    }//end class Rectangle  
+    public class Tabletop : Rectangle
+    {
+        private double cost;
+        public Tabletop(double l, double w) : base(l, w) { }
+
+        public double GetCost()
+        {
+            double cost;
+            cost = GetArea() * 70;
+            return cost;
+        }
+        public void Display()
+        {
+            base.Display();
+            Console.WriteLine("Cost: {0}", GetCost());
+        }
+    }
+    public class Animal
+    {
+        public void eat() { Console.WriteLine("Animal Eating..."); }
+    }
+    public class Dog : Animal
+    {
+        //privates are not visible/ accessible
+        // protected are directly accessible  no need of instance
+        //public void eat() { Console.WriteLine("Animal Eating..."); }
+        public void eat() { Console.WriteLine("Dog Eating..."); }
+        public void bark() { Console.WriteLine("Barking..."); }
+        // direct members ---> inherited members
+    }
+   
 
 }
+
 namespace ClassLibraryDemo.Child
 {
     class MyChild
