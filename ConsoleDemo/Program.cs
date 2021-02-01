@@ -111,9 +111,9 @@ namespace ConsoleDemo
             //Tabletop t = new Tabletop(4.5, 7.5);
             //t.Display();
 
-            ConsDemo4 d = new ConsDemo4(8);
+            StaticTest d = new StaticTest();
 
-
+            d.Test();
 
 
 

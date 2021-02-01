@@ -1,0 +1,90 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ClassLibraryDemo
+{
+    // static ctor
+    public class StaticDemo
+    {
+        // static variables/fields
+        // they can accespt acess specifier
+        // static members are class members not instance members. So no need of instance to access them.
+        // has to be accessed directly through the class name
+
+        public static int i=100;
+        public static int j=50;
+        public static int Sum;
+
+        public int Mul;
+
+
+        public int a
+        {
+            get
+            { 
+                return i; 
+            }
+            set { 
+                i = 5; 
+            }
+        }
+            
+          
+        // static keyword
+        // they cannoot acccept parameters
+        // no need to speify access specifiers
+        // called by compiler
+        static StaticDemo()
+        {
+            Sum = i + j;
+            Console.WriteLine("in static ctor ");
+
+        }
+        public StaticDemo()
+        {
+            Mul = i * j;
+            Console.WriteLine("in ctor default");
+        }
+        public StaticDemo(int h)
+        {
+            Console.WriteLine($"in ctor with int {h}");
+
+        }
+        public void PP()
+        {
+            Console.WriteLine("in non static PP");
+        }
+
+        // static methods can accept access specifier
+        // can only access static fields/variables
+        // accessed using className
+        // can accept parameters also
+        // they can be overloaded too..thay can have return type too
+        public static void PPStat()
+        {
+            
+            Console.WriteLine("in static PP");
+        }
+        public static void PPStat(string nae)
+        {
+
+            Console.WriteLine($"in static PP - {nae}");
+        }
+    }
+    public class StaticTest
+    {
+        public void Test()
+        {
+            StaticDemo o = new StaticDemo();
+            o.PP();
+            Console.WriteLine(o.a);
+            o.a = 10;
+            Console.WriteLine(o.a);//???10
+
+            //StaticDemo.PPStat("indra");
+
+            //Console.WriteLine($"sum is {StaticDemo.Sum} and Mul is {o.Mul}");
+        }
+    }
+}
