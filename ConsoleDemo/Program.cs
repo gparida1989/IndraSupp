@@ -111,14 +111,21 @@ namespace ConsoleDemo
             //Tabletop t = new Tabletop(4.5, 7.5);
             //t.Display();
 
-            StaticTest d = new StaticTest();
+            //StaticTest d = new StaticTest();
 
-            d.Test();
-
-
+            //d.Test();
 
 
+            Console.Write("enter string : ");
+            string s = Console.ReadLine();
 
+            Console.Write("enter the charecter to search  :");
+            char c = Convert.ToChar( Console.ReadLine());
+
+            bool found = s.FindLtr(c);
+
+            if (found == true) Console.WriteLine("found");
+            else Console.WriteLine("not found");
 
 
 

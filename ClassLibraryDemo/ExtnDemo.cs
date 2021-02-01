@@ -58,5 +58,17 @@ namespace ClassLibraryDemo
             }
             return sum;
         }
+
+        public static bool FindLtr(this string s ,char c)
+        {
+            bool res = false;
+
+            for(int i = 0; i < s.Length; i++)
+            {
+                if (s[i] == c) res = true;
+            }
+
+            return res;
+        }
     }
 }
