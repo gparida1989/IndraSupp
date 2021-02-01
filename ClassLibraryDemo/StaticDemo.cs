@@ -5,7 +5,10 @@ using System.Text;
 namespace ClassLibraryDemo
 {
     // static ctor
-    public class StaticDemo
+
+    // sttic class cannot be instatiated
+    // this can never contain non-static members
+    public static class StaticDemo
     {
         // static variables/fields
         // they can accespt acess specifier
@@ -16,18 +19,18 @@ namespace ClassLibraryDemo
         public static int j=50;
         public static int Sum;
 
-        public int Mul;
 
 
-        public int a
+        public static int A
         {
             get
             { 
                 return i; 
             }
             set { 
-                i = 5; 
+                i = value; 
             }
+            
         }
             
           
@@ -41,20 +44,8 @@ namespace ClassLibraryDemo
             Console.WriteLine("in static ctor ");
 
         }
-        public StaticDemo()
-        {
-            Mul = i * j;
-            Console.WriteLine("in ctor default");
-        }
-        public StaticDemo(int h)
-        {
-            Console.WriteLine($"in ctor with int {h}");
-
-        }
-        public void PP()
-        {
-            Console.WriteLine("in non static PP");
-        }
+      
+      
 
         // static methods can accept access specifier
         // can only access static fields/variables
@@ -76,11 +67,11 @@ namespace ClassLibraryDemo
     {
         public void Test()
         {
-            StaticDemo o = new StaticDemo();
-            o.PP();
-            Console.WriteLine(o.a);
-            o.a = 10;
-            Console.WriteLine(o.a);//???10
+            
+            Console.WriteLine(StaticDemo.A);
+            StaticDemo.A = 10;
+            Console.WriteLine(StaticDemo.A);//???10
+
 
             //StaticDemo.PPStat("indra");
 
