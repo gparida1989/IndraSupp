@@ -141,32 +141,59 @@ namespace ConsoleDemo
             //Console.Write(r);
 
 
-            var k = new KeywordDemo("canada");
-            k.Test();
+            //var k = new KeywordDemo("canada");
+            //k.Test();
 
-            var k1 = new KeywordDemo("mexico");
+            //var k1 = new KeywordDemo("mexico");
+
+            //k1.Test();
+            //typeof()
+            //sizeof()
+
+            //ternary op  -->   ?:
+
+            //is
+            //as
+
+            int i = 100;
            
-            k1.Test();
-            
+            //if(i > 100)
+            //{
+            //    s="hiiii";
+            //}
+            //else
+            //{
+            //    s="hello";
+
+            //}
+
+           // s = (i>100) ? "hiiii" : "hello";
+
+            //if(i is int)
+            //{
+            //    Console.Write("yes it is string");
+            //}
+
+            //Console.Write(s);
 
 
 
 
             //IMathOps m = new ValidationDemo();
 
-        //try
-        //{
-        //    var result = m.Devide(12, 0);
-        //}
-        //catch (Exception exc)
-        //{
-        //    Console.WriteLine(exc.Message);
-        //}
+            //try
+            //{
+            //    var result = m.Devide(12, 0);
+            //}
+            //catch (Exception exc)
+            //{
+            //    Console.WriteLine(exc.Message);
+            //}
 
 
-        //Console.WriteLine(result);
+            //Console.WriteLine(result);
 
-    }
+        }
 
     }
 }

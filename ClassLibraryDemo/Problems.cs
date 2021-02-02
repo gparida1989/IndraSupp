@@ -7,9 +7,9 @@ namespace ClassLibraryDemo
     public class Problems
     {
         // to count the no of occurance of a letter in a string
-        public int CountLtr(string s)
-        {
-
-        }
+        //public int CountLtr(string s,char c)
+        //{
+        //    //india
+        //}
     }
 }
