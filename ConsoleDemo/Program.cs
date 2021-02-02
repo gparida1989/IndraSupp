@@ -116,11 +116,11 @@ namespace ConsoleDemo
             //d.Test();
 
 
-            Console.Write("enter string : ");
-            string s = Console.ReadLine();
+            //Console.Write("enter string : ");
+            //string s = Console.ReadLine();
 
-            Console.Write("enter the charecter to search  :");
-            char c = Convert.ToChar( Console.ReadLine());
+            //Console.Write("enter the charecter to search  :");
+            //char c = Convert.ToChar( Console.ReadLine());
 
             //bool found = s.FindLtr(c);
 
@@ -136,11 +136,18 @@ namespace ConsoleDemo
 
             // signature ???
 
-            int r = s.CountNumber(c);
+            //int r = s.CountNumber(c);
 
-            Console.Write(r);
+            //Console.Write(r);
 
 
+            var k = new KeywordDemo("canada");
+            k.Test();
+
+            var k1 = new KeywordDemo("mexico");
+           
+            k1.Test();
+            
 
 
 

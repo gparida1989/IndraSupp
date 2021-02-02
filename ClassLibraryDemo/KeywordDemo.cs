@@ -7,6 +7,15 @@ namespace ClassLibraryDemo
     // internal, protected internal, private protected
     public class KeywordDemo
     {
+        // const variiavles cannot be changed by any means
+        // const variables are Class variables , [not instance mebrs], means we do not need instance to access const variables
+        public readonly string country = "canada";
+
+
+        public KeywordDemo(string s)
+        {
+            country = s;
+        }
         protected string Name = "indra";
         protected int Amount = 65;
         public  void Test()
@@ -14,7 +23,7 @@ namespace ClassLibraryDemo
             int i = 6;
             var name = true;  // explicit datatype declaration
 
-            
+            Console.WriteLine(country);
         }
 
     }
@@ -37,12 +46,5 @@ namespace ClassLibraryDemo
 
         
     }
-    class Another: KeywordDemo
-    {
-        
-        void TestA()
-        {
-           
-        }
-    }
+  
 }
