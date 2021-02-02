@@ -70,5 +70,28 @@ namespace ClassLibraryDemo
 
             return res;
         }
+
+        public static bool FindDuplicates(this string s, char p)
+        {
+            bool res = false;
+            return res;
+        }
+        public static int CountNumber(this string s, char c)
+        {
+            int count = 0;
+
+            for(int i = 0; i < s.Length; i++)
+            {
+                if(s[i] == c)
+                {
+                    count = count + 1;
+                }
+            }
+
+
+
+
+            return count;
+        }
     }
 }

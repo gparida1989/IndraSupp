@@ -122,17 +122,23 @@ namespace ConsoleDemo
             Console.Write("enter the charecter to search  :");
             char c = Convert.ToChar( Console.ReadLine());
 
-            bool found = s.FindLtr(c);
+            //bool found = s.FindLtr(c);
 
-            if (found == true) Console.WriteLine("found");
-            else Console.WriteLine("not found");
-
-
+            //if (found == true) Console.WriteLine("found");
+            //else Console.WriteLine("not found");
 
 
+            // count the no of times the letter occurs in the  string
+            // function name : CountNumber
+            // extn against datatype : string
+            // parameter : char
+            // return type : int
 
+            // signature ???
 
+            int r = s.CountNumber(c);
 
+            Console.Write(r);
 
 
 
@@ -141,19 +147,19 @@ namespace ConsoleDemo
 
             //IMathOps m = new ValidationDemo();
 
-            //try
-            //{
-            //    var result = m.Devide(12, 0);
-            //}
-            //catch (Exception exc)
-            //{
-            //    Console.WriteLine(exc.Message);
-            //}
+        //try
+        //{
+        //    var result = m.Devide(12, 0);
+        //}
+        //catch (Exception exc)
+        //{
+        //    Console.WriteLine(exc.Message);
+        //}
 
 
-            //Console.WriteLine(result);
+        //Console.WriteLine(result);
 
-        }
+    }
 
     }
 }
