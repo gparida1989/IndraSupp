@@ -100,4 +100,47 @@ namespace ClassLibraryDemo
             return result;
         }
     }
+
+
+    public struct MyStruct: IBase
+    {
+        int g;
+        public static string S1;
+        public string name;
+
+        public int MyProperty { get; set; }
+
+        public void print()
+        {
+            Console.Write("in struct");
+        }
+
+        public void PrintMe()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public interface IBase
+    {
+        void PrintMe();
+    }
+    public class MyClass: IBase
+    {
+        int g;
+        public string name;
+        public static string S1;
+
+        public int MyProperty { get; set; }
+
+        public void print()
+        {
+            Console.Write("in struct");
+        }
+
+        public void PrintMe()
+        {
+            throw new NotImplementedException();
+        }
+    }
 }

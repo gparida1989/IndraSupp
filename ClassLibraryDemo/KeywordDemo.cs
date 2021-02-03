@@ -11,7 +11,7 @@ namespace ClassLibraryDemo
         // const variables are Class variables , [not instance mebrs], means we do not need instance to access const variables
         public readonly string country = "canada";
 
-
+        public string name;
         public KeywordDemo(string s)
         {
             country = s;
@@ -46,5 +46,6 @@ namespace ClassLibraryDemo
 
         
     }
+   
   
 }

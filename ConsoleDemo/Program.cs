@@ -155,8 +155,8 @@ namespace ConsoleDemo
             //is
             //as
 
-            int i = 100;
-           
+            //int i = 100;
+
             //if(i > 100)
             //{
             //    s="hiiii";
@@ -167,7 +167,7 @@ namespace ConsoleDemo
 
             //}
 
-           // s = (i>100) ? "hiiii" : "hello";
+            // s = (i>100) ? "hiiii" : "hello";
 
             //if(i is int)
             //{
@@ -175,6 +175,20 @@ namespace ConsoleDemo
             //}
 
             //Console.Write(s);
+
+            //int e = Convert.ToInt32( Weeks.Friday);
+            //Console.WriteLine(e);
+
+            MyClass k = new MyClass();
+            MyClass.S1 = "hgh";
+
+
+            MyStruct myStruct=new MyStruct();
+            myStruct.print();
+            MyStruct.S1 = "ddfddfd";
+
+
+
 
 
 
