@@ -179,16 +179,24 @@ namespace ConsoleDemo
             //int e = Convert.ToInt32( Weeks.Friday);
             //Console.WriteLine(e);
 
-            MyClass k = new MyClass();
-            MyClass.S1 = "hgh";
+            //MyClass k = new MyClass();
+            //MyClass.S1 = "hgh";
 
 
-            MyStruct myStruct=new MyStruct();
-            myStruct.print();
-            MyStruct.S1 = "ddfddfd";
+            //MyStruct myStruct=new MyStruct();
+            //myStruct.print();
+            //MyStruct.S1 = "ddfddfd";
+
+            var o1 = new Op(20);
+            var o2 = new Op(10);
 
 
+            int res = o2 + o1;
+            int r = o2 / o1;
 
+            Console.WriteLine(res);
+
+            
 
 
 

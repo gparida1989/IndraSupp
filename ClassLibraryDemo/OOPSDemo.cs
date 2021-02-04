@@ -143,4 +143,20 @@ namespace ClassLibraryDemo
             throw new NotImplementedException();
         }
     }
+
+    public class Op
+    {
+        int i;
+        public Op(int x)
+        {
+            i = x;
+        }
+
+        public static int operator+(Op o1,Op o2)
+        {
+            int res = o1.i + o2.i;
+            return res;
+        }
+
+    }
 }
