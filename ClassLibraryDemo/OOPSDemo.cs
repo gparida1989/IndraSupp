@@ -157,6 +157,7 @@ namespace ClassLibraryDemo
             int res = o1.i + o2.i;
             return res;
         }
-
     }
+
+
 }

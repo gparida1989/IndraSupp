@@ -187,16 +187,11 @@ namespace ConsoleDemo
             //myStruct.print();
             //MyStruct.S1 = "ddfddfd";
 
-            var o1 = new Op(20);
-            var o2 = new Op(10);
+
+            FileSteamDemo o = new FileSteamDemo();
+            o.ReadFile();
 
 
-            int res = o2 + o1;
-            int r = o2 / o1;
-
-            Console.WriteLine(res);
-
-            
 
 
 
