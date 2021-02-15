@@ -188,9 +188,17 @@ namespace ConsoleDemo
             //MyStruct.S1 = "ddfddfd";
 
 
-            FileSteamDemo o = new FileSteamDemo();
-            o.ReadFile();
+            //FileSteamDemo o = new FileSteamDemo();
+            //o.ReadFile();
 
+            using (DisposeDemo d = new DisposeDemo())
+                d.Test();
+
+
+
+            //Console.Write("h");
+            //Console.Write("\n");
+            //Console.Write("indra");
 
 
 

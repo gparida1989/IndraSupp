@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
@@ -9,21 +8,36 @@ namespace ClassLibraryDemo
     {
         public void ReadFile()
         {
-            FileStream f = new FileStream("indra.txt", FileMode.Open,FileAccess.Read);
 
-            byte[] content = new byte[f.Length];
+            var p = @"C:\Users\gopal\source\repos\IndraSupp\ClassLibraryDemo\indra.txt";
 
-            f.Read(content, 0, (int)f.Length);
 
-            var txt=Encoding.UTF8.GetString(content);
-
-            Console.WriteLine(txt);
-            
-            
-            f.Close();
-
-           
+            ReadFile(p);
         }
-       
+
+        private void WriteFile(string path)
+        {
+            FileStream f = new FileStream(path, FileMode.Append, FileAccess.Write);
+            var textToBeadded = " I have also cleared Csharp.";
+
+            var content = Encoding.UTF8.GetBytes(textToBeadded);
+
+            f.Write(content, (int)f.Length, textToBeadded.Length);
+
+            f.Close();
+        }
+
+        private void ReadFile(string path)
+        {
+            using (FileStream f = new FileStream(path, FileMode.Open, FileAccess.Read))
+                {
+                    byte[] content = new byte[f.Length];
+                    f.Read(content, 0, (int)f.Length);
+                    Console.WriteLine(Encoding.UTF8.GetString(content));
+                }
+            
+
+        }
+
     }
 }
