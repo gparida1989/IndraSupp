@@ -191,8 +191,8 @@ namespace ConsoleDemo
             //FileSteamDemo o = new FileSteamDemo();
             //o.ReadFile();
 
-            using (DisposeDemo d = new DisposeDemo())
-                d.Test();
+            ADODemo aDO = new ADODemo();
+            aDO.ReadTable();
 
 
 
