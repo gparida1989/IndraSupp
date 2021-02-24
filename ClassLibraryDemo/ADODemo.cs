@@ -56,6 +56,25 @@ namespace ClassLibraryDemo
             }
         }
 
-        
+        public void ReadTable(bool singleValue)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("select [id] from [dbo].[DemoUsers]", connection);
+
+                connection.Open();
+                int response = (int)cmd.ExecuteScalar();
+
+                Console.WriteLine($" country is = {response}");
+
+                connection.Close();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                //ExecuteReader requires an open and available Connection. The connection's current state is closed.
+            }
+
+        }
     }
 }
