@@ -192,7 +192,7 @@ namespace ConsoleDemo
             //o.ReadFile();
 
             ADODemo aDO = new ADODemo();
-            aDO.ReadTable(true);
+            aDO.FetchTableDisconnected();
 
 
 

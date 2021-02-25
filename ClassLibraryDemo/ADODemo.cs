@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Data.SqlClient;
 
 
@@ -34,6 +35,29 @@ namespace ClassLibraryDemo
             {
                 Console.WriteLine(e.Message);
                 //ExecuteReader requires an open and available Connection. The connection's current state is closed.
+            }
+
+        }
+
+
+        public void FetchTableDisconnected()
+        {
+            SqlDataAdapter adapter = new SqlDataAdapter("select * from [dbo].[myTable]", connection);
+
+            DataTable dt = new DataTable();
+            try
+            {
+                adapter.Fill(dt);
+
+                for(int i = 0; i < dt.Rows.Count; i++)
+                {
+                    var currentRow = dt.Rows[i];
+                    Console.WriteLine($"name is {currentRow[0]} and country is {currentRow[1]}");
+                }
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
             }
 
         }
@@ -76,5 +100,7 @@ namespace ClassLibraryDemo
             }
 
         }
+
+       
     }
 }
