@@ -191,9 +191,14 @@ namespace ConsoleDemo
             //FileSteamDemo o = new FileSteamDemo();
             //o.ReadFile();
 
-            ADODemo aDO = new ADODemo();
-            aDO.FetchTableDisconnected();
+            //ADODemo aDO = new ADODemo();
+            //aDO.FetchTableDisconnected();
 
+            IndexerDemo n = new IndexerDemo("canada", "indra");
+            var country = n[0];
+            var name = n[1];
+
+            Console.WriteLine($"country = {country}");
 
 
             //Console.Write("h");
