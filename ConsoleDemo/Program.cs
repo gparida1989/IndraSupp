@@ -194,11 +194,15 @@ namespace ConsoleDemo
             //ADODemo aDO = new ADODemo();
             //aDO.FetchTableDisconnected();
 
-            IndexerDemo n = new IndexerDemo("canada", "indra");
-            var country = n[0];
-            var name = n[1];
+            //IndexerDemo n = new IndexerDemo("canada", "indra");
+            //var country = n[0];
+            //var name = n[1];
 
-            Console.WriteLine($"country = {country}");
+            //Console.WriteLine($"country = {country}");
+
+            CollectionDemo c
+                = new CollectionDemo();
+            c.Test();
 
 
             //Console.Write("h");
