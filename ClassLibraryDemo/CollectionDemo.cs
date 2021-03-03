@@ -5,8 +5,13 @@ using System.Text;
 
 namespace ClassLibraryDemo
 {
-    public class CollectionDemo
+    public class CollectionDemo : IEnumerable
     {
+        public IEnumerator GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
+
         public void Test()
         {
             Hashtable hashtable = new Hashtable();
@@ -17,7 +22,8 @@ namespace ClassLibraryDemo
 
 
             var length = hashtable.Count;
-
+            // the value india is at key 101
+            // the value US is at key 102..
             foreach(var key in hashtable.Keys)
             {
                 var value = hashtable[key];

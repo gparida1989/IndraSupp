@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using ClassLibraryDemo;
 using ClassLibraryDemo.Child;
 
@@ -200,10 +201,29 @@ namespace ConsoleDemo
 
             //Console.WriteLine($"country = {country}");
 
-            CollectionDemo c
-                = new CollectionDemo();
-            c.Test();
+            //CollectionDemo c
+            //    = new CollectionDemo();
+            //c.Test();
 
+            //int[] a = new int[8];
+            //foreach(var x in c)
+            //{
+
+            //}
+
+            EnuDemo e = new EnuDemo();
+            //e.Reset();
+            //do
+            //{
+            //    Console.WriteLine(e.Current);
+            //} while (e.MoveNext());
+
+            foreach(var o in e)
+            {
+                Console.WriteLine(o);
+            }
+
+                
 
             //Console.Write("h");
             //Console.Write("\n");
