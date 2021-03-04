@@ -218,12 +218,32 @@ namespace ConsoleDemo
             //    Console.WriteLine(e.Current);
             //} while (e.MoveNext());
 
-            foreach(var o in e)
-            {
-                Console.WriteLine(o);
-            }
+            //foreach(var o in e)
+            //{
+            //    Console.WriteLine(o);
+            //}
 
-                
+            MyCass c = new MyCass();
+
+            DelDemo d = new DelDemo();
+
+            d.Funtus(5);
+
+
+
+
+
+
+
+
+
+
+
+
+
+            d.Test1(c.Sing);
+
+
 
             //Console.Write("h");
             //Console.Write("\n");
@@ -249,5 +269,13 @@ namespace ConsoleDemo
 
         }
 
+    }
+
+    class MyCass
+    {
+        public void Sing(int g)
+        {
+            Console.Write($"singing {g} times");
+        }
     }
 }
