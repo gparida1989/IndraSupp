@@ -211,7 +211,7 @@ namespace ConsoleDemo
 
             //}
 
-            EnuDemo e = new EnuDemo();
+            //EnuDemo e = new EnuDemo();
             //e.Reset();
             //do
             //{
@@ -223,16 +223,22 @@ namespace ConsoleDemo
             //    Console.WriteLine(o);
             //}
 
-            MyCass c = new MyCass();
+            //MyCass c = new MyCass();
 
-            DelDemo d = new DelDemo();
+            //DelDemo d = new DelDemo();
 
-            d.Funtus(5);
-
-
-
+            //d.test();
+            //d.Funtus(6);
 
 
+            Dojo d = new Dojo();
+
+            for(int i = 1; i <= 20; i++)
+            {
+                Console.Write($"{i} => ");
+                Console.WriteLine(d.Compute($"{i}"));
+            }
+            
 
 
 
@@ -241,7 +247,9 @@ namespace ConsoleDemo
 
 
 
-            d.Test1(c.Sing);
+
+
+           // d.Test1(c.Sing);
 
 
 
