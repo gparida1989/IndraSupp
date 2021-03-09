@@ -51,6 +51,9 @@ namespace ClassLibraryDemo
                     displayValue += "Qix";
                 }
 
+
+               
+
             }
             catch (Exception e)
             {
@@ -60,6 +63,11 @@ namespace ClassLibraryDemo
 
 
             if (displayValue == "") displayValue = s;
+            // heck 3 -- checking 0
+            if (displayValue.Contains("0"))
+            {
+                displayValue.Replace("0", "*");
+            }
             return displayValue;
         }
     }
