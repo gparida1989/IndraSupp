@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ClassLibraryDemo
 {
@@ -19,7 +17,7 @@ namespace ClassLibraryDemo
             // contanins 3,5,7 check
 
 
-            string displayValue= "";
+            string displayValue = "";
             try
             {
                 int i = Convert.ToInt32(s);
@@ -38,21 +36,36 @@ namespace ClassLibraryDemo
 
 
 
-                if (s.Contains("3"))
+                // need to find out exact position of 0
+                // no of 0
+                // 30 --> FooBarFoo*
+                // 30 --> '3','0'
+
+                char[] ar = s.ToCharArray();
+
+                foreach (char c in ar)
                 {
-                    displayValue += "Foo";
-                }
-                if (s.Contains("5"))
-                {
-                    displayValue +=  "Bar";
-                }
-                if (s.Contains("7"))
-                {
-                    displayValue += "Qix";
+                    if (c == '3')
+                    {
+                        displayValue += "Foo";
+                    }
+                    else if (c == '5')
+                    {
+                        displayValue += "Bar";
+                    }
+                    else if (c == '7')
+                    {
+                        displayValue += "Qix";
+                    }
+                    else if (c == '0')
+                    {
+                        displayValue += "*";
+                    }
                 }
 
 
-               
+
+
 
             }
             catch (Exception e)
@@ -62,12 +75,11 @@ namespace ClassLibraryDemo
 
 
 
-            if (displayValue == "") displayValue = s;
-            // heck 3 -- checking 0
-            if (displayValue.Contains("0"))
+            if (displayValue == "")
             {
-                displayValue.Replace("0", "*");
+                displayValue = s;
             }
+
             return displayValue;
         }
     }
