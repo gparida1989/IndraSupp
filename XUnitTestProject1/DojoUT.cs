@@ -9,12 +9,12 @@ namespace XUnitTestDemo
     public class DojoUT
     {
         [Theory]
-        [InlineData("FooBarBar", "15")]
-        [InlineData("8", "8")]
-        [InlineData("FooFoo", "3")]
-        [InlineData("FooBarFoo*", "30")]
+        //[InlineData("FooBarBar", "15")]
+        //[InlineData("8", "8")]
+        //[InlineData("FooFoo", "3")]
+        //[InlineData("FooBarFoo*", "30")]
         [InlineData("FooBarQix*Bar","105")]
-        [InlineData("FooBar","51")]
+        //[InlineData("FooBar","51")]
         public void TestDojo(string exp,string input)
         {
             // arrange
