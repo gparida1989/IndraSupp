@@ -223,22 +223,41 @@ namespace ConsoleDemo
             //    Console.WriteLine(o);
             //}
 
-            //MyCass c = new MyCass();
+            MyCass c = new MyCass();
 
-            //DelDemo d = new DelDemo();
+            DelDemo d = new DelDemo();
 
-            //d.test();
-            //d.Funtus(6);
+            DelDemo.indra mydel = c.Sing;
+            mydel += d.Funtus;
+            mydel += c.Sing1;
+            mydel += c.Sing2;
+            mydel += c.Sing3;
+            mydel += c.Sing4;
 
+            Delegate[] result =  mydel.GetInvocationList();
 
-            Dojo d = new Dojo();
+            Random random = new Random(0);
 
-            for(int i = 1; i <= 20; i++)
+            for (int j = 0; j <= 5; j++)
             {
-                Console.Write($"{i} => ");
-                Console.WriteLine(d.Compute($"{i}"));
+               
+                int i = random.Next(5);
+
+                DelDemo.indra h = (DelDemo.indra)result[i];
+                h(5355);
             }
-            
+
+            //Console.WriteLine( result.Length);
+
+
+
+            //Dojo d = new Dojo();
+
+            //for(int i = 1; i <= 20; i++)
+            //{
+            //    Console.Write($"{i} => ");
+            //    Console.WriteLine(d.Compute($"{i}"));
+            //}
 
 
 
@@ -249,7 +268,8 @@ namespace ConsoleDemo
 
 
 
-           // d.Test1(c.Sing);
+
+            // d.Test1(c.Sing);
 
 
 
@@ -283,7 +303,24 @@ namespace ConsoleDemo
     {
         public void Sing(int g)
         {
-            Console.Write($"singing {g} times");
+            Console.WriteLine($"singing0 {g} times");
         }
+        public void Sing1(int g)
+        {
+            Console.WriteLine($"singing1 {g} times");
+        }
+        public void Sing2(int g)
+        {
+            Console.WriteLine($"singing2 {g} times");
+        }
+        public void Sing3(int g)
+        {
+            Console.WriteLine($"singing3 {g} times");
+        }
+        public void Sing4(int g)
+        {
+            Console.WriteLine($"singing4 {g} times");
+        }
+
     }
 }

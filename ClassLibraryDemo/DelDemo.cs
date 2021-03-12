@@ -9,6 +9,7 @@ namespace ClassLibraryDemo
         // declaring delegte, function signature must match
         // return type, data type of parameter
         // no of parameter
+        // always is a class member , can only be accessed using class name. like static members.
         public delegate void indra(int y);
 
         public void Fun()
@@ -18,7 +19,7 @@ namespace ClassLibraryDemo
         public void Funtus(int s)
         {
             Console.WriteLine("Hi hello");
-            Console.Write(s);//5
+            Console.WriteLine(s);//5
         }
 
         public void test()
@@ -34,3 +35,10 @@ namespace ClassLibraryDemo
         }
     }
 }
+
+/* int - 3,5,....
+ * string  - "india","canadaa"
+ * float - 1.5,3.4...
+ * bool - true,false
+ * Delegate(indra) - function having same signature as of delegate -{ xxx provided  void xxx(int c) exists. }
+ */
