@@ -2,6 +2,7 @@
 using System.Collections;
 using ClassLibraryDemo;
 using ClassLibraryDemo.Child;
+using ClassLibraryDemo.Kata;
 
 namespace ConsoleDemo
 {
@@ -223,29 +224,29 @@ namespace ConsoleDemo
             //    Console.WriteLine(o);
             //}
 
-            MyCass c = new MyCass();
+            //MyCass c = new MyCass();
 
-            DelDemo d = new DelDemo();
+            //DelDemo d = new DelDemo();
 
-            DelDemo.indra mydel = c.Sing;
-            mydel += d.Funtus;
-            mydel += c.Sing1;
-            mydel += c.Sing2;
-            mydel += c.Sing3;
-            mydel += c.Sing4;
+            //DelDemo.indra mydel = c.Sing;
+            //mydel += d.Funtus;
+            //mydel += c.Sing1;
+            //mydel += c.Sing2;
+            //mydel += c.Sing3;
+            //mydel += c.Sing4;
 
-            Delegate[] result =  mydel.GetInvocationList();
+            //Delegate[] result =  mydel.GetInvocationList();
 
-            Random random = new Random(0);
+            //Random random = new Random(0);
 
-            for (int j = 0; j <= 5; j++)
-            {
-               
-                int i = random.Next(5);
+            //for (int j = 0; j <= 5; j++)
+            //{
 
-                DelDemo.indra h = (DelDemo.indra)result[i];
-                h(5355);
-            }
+            //    int i = random.Next(5);
+
+            //    DelDemo.indra h = (DelDemo.indra)result[i];
+            //    h(5355);
+            //}
 
             //Console.WriteLine( result.Length);
 
@@ -292,6 +293,41 @@ namespace ConsoleDemo
             //    Console.WriteLine(exc.Message);
             //}
 
+            ClassLibraryDemo.Kata.Rectangle rectangle= new ClassLibraryDemo.Kata.Rectangle(10, 56);
+            Circle circle = new Circle(20);
+
+            Shape shape = circle;
+            
+            
+            
+            
+            
+            
+            IShape shape1 = shape;
+
+            Validator validator = new Validator();
+
+            bool valid = validator.ValidateShape(shape);
+
+
+            if (valid == true)
+            {
+                // calculate area
+                AreaCalculator areaCalculator = new AreaCalculator((s) =>
+                    {
+                        var v = (Circle)s;
+
+                        return Math.PI * v.radius * v.radius;
+                    });
+
+
+
+                areaCalculator.Area(shape);
+            }
+            else
+            {
+                Console.WriteLine("In valid shape");
+            }
 
             //Console.WriteLine(result);
 
