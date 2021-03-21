@@ -224,18 +224,23 @@ namespace ConsoleDemo
             //    Console.WriteLine(o);
             //}
 
-            //MyCass c = new MyCass();
+            MyCass c = new MyCass();
 
-            //DelDemo d = new DelDemo();
+            DelDemo d = new DelDemo();
 
-            //DelDemo.indra mydel = c.Sing;
-            //mydel += d.Funtus;
-            //mydel += c.Sing1;
-            //mydel += c.Sing2;
-            //mydel += c.Sing3;
-            //mydel += c.Sing4;
+            DelDemo.indra mydel = c.Sing;
+            mydel += d.Funtus;
+            mydel += c.Sing1;
+            mydel += c.Sing2;
+            mydel += c.Sing3;
+            mydel += c.Sing4;
 
-            //Delegate[] result =  mydel.GetInvocationList();
+            Delegate[] result =  mydel.GetInvocationList();
+
+            for(int i = 0; i < result.Length; i++)
+            {
+                Console.WriteLine(result[i].Method.Name);
+            }
 
             //Random random = new Random(0);
 
@@ -248,7 +253,7 @@ namespace ConsoleDemo
             //    h(5355);
             //}
 
-            //Console.WriteLine( result.Length);
+            //Console.WriteLine(result.Length);
 
 
 
@@ -293,41 +298,41 @@ namespace ConsoleDemo
             //    Console.WriteLine(exc.Message);
             //}
 
-            ClassLibraryDemo.Kata.Rectangle rectangle= new ClassLibraryDemo.Kata.Rectangle(10, 56);
-            Circle circle = new Circle(20);
+            //ClassLibraryDemo.Kata.Rectangle rectangle= new ClassLibraryDemo.Kata.Rectangle(10, 56);
+            //Circle circle = new Circle(20);
 
-            Shape shape = circle;
-            
-            
-            
-            
-            
-            
-            IShape shape1 = shape;
-
-            Validator validator = new Validator();
-
-            bool valid = validator.ValidateShape(shape);
-
-
-            if (valid == true)
-            {
-                // calculate area
-                AreaCalculator areaCalculator = new AreaCalculator((s) =>
-                    {
-                        var v = (Circle)s;
-
-                        return Math.PI * v.radius * v.radius;
-                    });
+            //Shape shape = circle;
 
 
 
-                areaCalculator.Area(shape);
-            }
-            else
-            {
-                Console.WriteLine("In valid shape");
-            }
+
+
+
+            //IShape shape1 = shape;
+
+            //Validator validator = new Validator();
+
+            //bool valid = validator.ValidateShape(shape);
+
+
+            //if (valid == true)
+            //{
+            //    // calculate area
+            //    AreaCalculator areaCalculator = new AreaCalculator((s) =>
+            //        {
+            //            var v = (Circle)s;
+
+            //            return Math.PI * v.radius * v.radius;
+            //        });
+
+
+
+            //    areaCalculator.Area(shape);
+            //}
+            //else
+            //{
+            //    Console.WriteLine("In valid shape");
+            //}
 
             //Console.WriteLine(result);
 
