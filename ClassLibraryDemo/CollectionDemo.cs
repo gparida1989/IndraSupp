@@ -32,4 +32,21 @@ namespace ClassLibraryDemo
            
         }
     }
+
+    public class MyColl
+    {
+        public List<int> GetList()
+        {
+            List<int> ls = new List<int>();
+
+            Random random = new Random(10);
+
+            for(int i = 0; i <= 500; i += 2)
+            {
+                ls.Add((11 * (i+3) - random.Next(111)) + random.Next(500));
+            }
+
+            return ls;
+        }
+    }
 }
